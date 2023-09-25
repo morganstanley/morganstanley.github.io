@@ -38,8 +38,9 @@
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop -H 0.0.0.0",
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build && npm run pub",
     "serve": "gatsby serve",
+    "pub": "rm -rf ../docs && mv public ../docs",
     "clean": "gatsby clean"
   },
   "devDependencies": {
