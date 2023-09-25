@@ -164,9 +164,6 @@
 
 @media (max-width: 767px) {
   .card-collection {
-    flex: none;
-  }
-  .card-collection .card {
-    flex-basis: 100%;
+    display: block;
   }
 }
