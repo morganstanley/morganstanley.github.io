@@ -41,3 +41,15 @@
 .news-main .hero {
   background-image: url('../../static/images/02393_2022Q2ArtRev_GettyImages-184873183_2285px.jpg');
 }
+
+@media (max-width: 767px) {
+  .hero {
+    height: 400px;
+  }
+  .hero article {
+    width: auto;
+  }
+  .home-main .hero {
+    background-position: 30% 75%;
+  }
+}
