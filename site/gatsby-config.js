@@ -6,7 +6,6 @@ module.exports = {
     description: `Morgan Stanley Open Source Software`,
     siteUrl: 'http://opensource.morganstanley.com',
     contributeUrl: false,
-    //  contributeUrl: url-of.contribute.site,
   },
   pathPrefix: `/`, // include subdirectory
   flags: {

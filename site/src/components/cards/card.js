@@ -17,7 +17,7 @@ export default function Card({
         {image ? (
           <div className="card-image">
             {link ? (
-              <a href={link} target="_blank" rel="noreferrer">
+              <a href={link}>
                 <img src={image} alt={title} />
               </a>
             ) : (
@@ -30,15 +30,7 @@ export default function Card({
         <div className="eyebrow-wrapper">
           <div className={eyebrowClassNames}>{category}</div>
         </div>
-        <h3>
-          {link ? (
-            <a href={link} target="_blank" rel="noreferrer">
-              {title}
-            </a>
-          ) : (
-            title
-          )}
-        </h3>
+        <h3>{link ? <a href={link}>{title}</a> : title}</h3>
         {children}
       </div>
     </section>

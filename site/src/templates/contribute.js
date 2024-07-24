@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import Seo from '../components/seo';
 
 const ContributeTemplate = ({ children, data, pageContext, location }) => {
   const docs = data.allMdx.nodes;
@@ -11,7 +10,6 @@ const ContributeTemplate = ({ children, data, pageContext, location }) => {
 
   return (
     <Layout data={data} location={location}>
-      <Seo title={pageTitle} description={pageContext.description} />
       <article className="page-main content contribute-main">
         <nav className="nav contribute-nav">
           <h4>Contribute</h4>
@@ -51,6 +49,13 @@ const ContributeTemplate = ({ children, data, pageContext, location }) => {
 };
 
 export default ContributeTemplate;
+
+export const Head = ({ pageContext }) => (
+  <>
+    <title>{pageContext.frontmatter.title}</title>
+    <meta name="description" content={pageContext.description} />
+  </>
+);
 
 export const pageQuery = graphql`
   query ($id: String!) {

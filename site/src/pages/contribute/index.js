@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../../components/layout';
-import Seo from '../../components/seo';
 import ContributeHero from '../../../content/contribute-hero';
 
 const ContributeIndex = ({ data, location }) => {
@@ -33,13 +32,14 @@ const ContributeIndex = ({ data, location }) => {
             </article>
           );
         })}
-        <Seo title="Contribute" />
       </div>
     </Layout>
   );
 };
 
 export default ContributeIndex;
+
+export const Head = () => <title>Contribute</title>;
 
 export const pageQuery = graphql`
   query {

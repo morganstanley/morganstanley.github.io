@@ -4,28 +4,25 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const result = await graphql(
-    `
-      {
-        allMdx {
-          nodes {
-            id
-            tableOfContents
-            frontmatter {
-              date
-              title
-            }
-            internal {
-              contentFilePath
-            }
-            fields {
-              slug
-            }
+  const result = await graphql(`
+    {
+      allMdx {
+        nodes {
+          id
+          tableOfContents
+          frontmatter {
+            title
+          }
+          internal {
+            contentFilePath
+          }
+          fields {
+            slug
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   if (result.errors) {
     throw result.errors;
@@ -40,26 +37,18 @@ exports.createPages = async ({ graphql, actions }) => {
   function getCategory(page) {
     const path = page.internal.contentFilePath;
 
-    return path
-      ? path.includes('/news/')
-        ? 'news'
-        : path.includes('/contribute/')
-        ? 'contribute'
-        : ''
-      : '';
+    return path ? (path.includes('/contribute/') ? 'contribute' : '') : '';
   }
 
   function getTemplate(category) {
     return category
-      ? category.includes('news')
-        ? newsTemplate
-        : category.includes('contribute')
+      ? category.includes('contribute')
         ? contributeTemplate
         : pageTemplate
       : pageTemplate;
   }
 
-  pages.forEach((page, index) => {
+  pages.forEach((page) => {
     const category = getCategory(page);
     createPage({
       path: page.fields.slug,
