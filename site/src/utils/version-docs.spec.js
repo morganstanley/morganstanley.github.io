@@ -11,8 +11,7 @@ test('Gets documentation by version', () => {
         title: 'Components',
       },
       internal: {
-        contentFilePath:
-          '/Users/mimiflynn/Projects/MS/ms-gh-pages/site/content/documentation/1.0/components.mdx',
+        contentFilePath: '/site/content/documentation/1.0/components.mdx',
       },
       fields: {
         slug: '/documentation/1.0/components/',
