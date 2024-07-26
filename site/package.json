@@ -36,6 +36,11 @@
     "react-dom": "^18.3.1",
     "style-to-object": "^1.0.6"
   },
+  "overrides": {
+    "gatsby": {
+      "axios": "^1.2.1"
+    }
+  },
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop -H 0.0.0.0",
