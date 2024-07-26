@@ -30,7 +30,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create  pages.
   const pages = result.data.allMdx.nodes;
-  const newsTemplate = path.resolve(`./src/templates/news.js`);
   const contributeTemplate = path.resolve(`./src/templates/contribute.js`);
   const pageTemplate = path.resolve(`./src/templates/page.js`);
 
