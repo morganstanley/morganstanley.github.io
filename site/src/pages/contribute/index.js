@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../../components/layout';
+import PageHead from '../../components/page-head';
+
 import ContributeHero from '../../../content/contribute-hero';
 
 const ContributeIndex = ({ data, location }) => {
@@ -39,7 +41,10 @@ const ContributeIndex = ({ data, location }) => {
 
 export default ContributeIndex;
 
-export const Head = () => <title>Contribute</title>;
+export const Head = ({ data }) => {
+  const title = `Contribute | ${data.site.siteMetadata.title}`;
+  return <PageHead title={title} />;
+};
 
 export const pageQuery = graphql`
   query {
