@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import PageHead from '../components/page-head';
 
 const ContributeTemplate = ({ children, data, pageContext, location }) => {
   const docs = data.allMdx.nodes;
@@ -54,12 +55,14 @@ const ContributeTemplate = ({ children, data, pageContext, location }) => {
 
 export default ContributeTemplate;
 
-export const Head = ({ pageContext }) => (
-  <>
-    <title>{pageContext.frontmatter.title}</title>
-    <meta name="description" content={pageContext.description} />
-  </>
-);
+export const Head = ({ data, pageContext }) => {
+  const title = `${pageContext.frontmatter.title} | ${data.site.siteMetadata.title}`;
+  return (
+    <PageHead title={title}>
+      <meta name="description" content={pageContext.description} />
+    </PageHead>
+  );
+};
 
 export const pageQuery = graphql`
   query ($id: String!) {
