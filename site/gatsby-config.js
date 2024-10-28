@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Morgan Stanley Open Source Software`,
     description: `Morgan Stanley Open Source Software`,
-    siteUrl: 'http://opensource.morganstanley.com',
+    siteUrl: 'https://morganstanley.github.io',
     contributeUrl: false,
   },
   pathPrefix: `/`, // include subdirectory
