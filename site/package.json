@@ -1,8 +1,8 @@
 {
-  "name": "opensource.morganstanley.com",
+  "name": "morganstanley.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "external opensource marketing website opensource.morganstanley.com",
+  "description": "external opensource marketing website morganstanley.github.io",
   "author": "Morgan Stanley",
   "keywords": [
     "gatsby"
