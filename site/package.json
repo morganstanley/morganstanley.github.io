@@ -12,7 +12,7 @@
     "npm": "^10.3.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mdx-js/react": "^2.3.0",
     "@mui/material": "^6.4.6",
