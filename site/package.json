@@ -7,10 +7,6 @@
   "keywords": [
     "gatsby"
   ],
-  "engines": {
-    "node": "^20.11.0",
-    "npm": "^10.3.0"
-  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -37,7 +33,9 @@
     "style-to-object": "^1.0.8"
   },
   "overrides": {
-    "axios": "^1.7.4",
+    "axios": "^1.12.2",
+    "cookie": "^1.0.2",
+    "tmp": "^0.2.5",
     "webpack-dev-middleware": "^5.3.4"
   },
   "scripts": {
