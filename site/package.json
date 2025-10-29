@@ -1,5 +1,5 @@
 {
-  "name": "morganstanley.github.io",
+  "name": "@morgan-stanley/morganstanley.github.io",
   "version": "1.0.0",
   "private": true,
   "description": "external opensource marketing website morganstanley.github.io",
@@ -7,37 +7,35 @@
   "keywords": [
     "gatsby"
   ],
-  "engines": {
-    "node": "^20.11.0",
-    "npm": "^10.3.0"
-  },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@mdx-js/react": "^2.3.0",
-    "@mui/material": "^6.1.9",
-    "gatsby": "^5.14.0",
-    "gatsby-plugin-image": "^3.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-mdx": "^5.14.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-plugin-sitemap": "^6.14.0",
+    "@mui/material": "^7.3.2",
+    "gatsby": "^5.14.3",
+    "gatsby-plugin-image": "^3.15.0",
+    "gatsby-plugin-manifest": "^5.15.0",
+    "gatsby-plugin-mdx": "^5.15.0",
+    "gatsby-plugin-sharp": "^5.15.0",
+    "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-plugin-webfonts": "^2.3.2",
-    "gatsby-remark-autolink-headers": "^6.14.0",
-    "gatsby-remark-copy-linked-files": "^6.14.0",
-    "gatsby-remark-images": "^7.14.0",
-    "gatsby-remark-prismjs": "^7.14.0",
-    "gatsby-remark-responsive-iframe": "^6.14.0",
-    "gatsby-remark-smartypants": "^6.14.0",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "prismjs": "^1.29.0",
+    "gatsby-remark-autolink-headers": "^6.15.0",
+    "gatsby-remark-copy-linked-files": "^6.15.0",
+    "gatsby-remark-images": "^7.15.0",
+    "gatsby-remark-prismjs": "^7.15.0",
+    "gatsby-remark-responsive-iframe": "^6.15.0",
+    "gatsby-remark-smartypants": "^6.15.0",
+    "gatsby-source-filesystem": "^5.15.0",
+    "gatsby-transformer-sharp": "^5.15.0",
+    "prismjs": "^1.30.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "style-to-object": "^1.0.8"
   },
   "overrides": {
-    "axios": "^1.7.4",
+    "axios": "^1.12.2",
+    "cookie": "^1.0.2",
+    "tmp": "^0.2.5",
     "webpack-dev-middleware": "^5.3.4"
   },
   "scripts": {
@@ -51,12 +49,12 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.0.1",
+    "@testing-library/react": "^16.3.0",
     "babel-jest": "^29.7.0",
     "babel-preset-gatsby": "^3.13.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "prettier": "^3.4.1"
+    "prettier": "^3.5.3"
   }
 }
