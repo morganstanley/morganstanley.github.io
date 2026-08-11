@@ -2,7 +2,6 @@ import React, { useCallback, useMemo, useState } from 'react';
 import { Link, navigate, graphql } from 'gatsby';
 import { Box } from '@mui/material';
 
-import Layout from '../components/layout';
 import PageHead from '../components/page-head';
 import VersionSelect from '../components/version-select';
 import { getCurrentVersion, getDocsVersion } from '../utils/version-docs';
@@ -33,7 +32,7 @@ const DocumentationTemplate = ({ children, data, pageContext, location }) => {
   );
 
   return (
-    <Layout data={data} location={location}>
+    <>
       <article className="page-main content">
         <h3>{siteTitle}</h3>
       </article>
@@ -78,7 +77,7 @@ const DocumentationTemplate = ({ children, data, pageContext, location }) => {
           {children}
         </div>
       </article>
-    </Layout>
+    </>
   );
 };
 
