@@ -35,7 +35,7 @@
   "overrides": {
     "axios": "^1.12.2",
     "cookie": "^1.0.2",
-    "tmp": "^0.2.5",
+    "tmp": "^0.2.7",
     "webpack-dev-middleware": "^5.3.4"
   },
   "scripts": {
