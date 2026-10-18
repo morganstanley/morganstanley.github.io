@@ -5,13 +5,28 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Header = ({ location, links }) => {
   function menuLink(text) {
     const path = links[text];
-    const classname = location.pathname?.includes(path)
-      ? 'nav-link-current'
-      : 'nav-link';
+
+    const currentPath =
+      location.pathname.replace(/\/+$/, '') || '/';
+
+    const targetPath =
+      path.replace(/\/+$/, '') || '/';
+
+    const classname =
+      currentPath === targetPath
+        ? 'nav-link-current'
+        : 'nav-link';
 
     return (
       <li className={classname} key={text}>
-        <Link to={path}>{text}</Link>
+        <Link
+          to={path}
+          aria-current={
+            currentPath === targetPath ? 'page' : undefined
+          }
+        >
+          {text}
+        </Link>
       </li>
     );
   }
@@ -19,7 +34,10 @@ const Header = ({ location, links }) => {
   return (
     <div className="content">
       <h1 className="logo">
-        <Link className="logo-link" to={`//morganstanley.github.io`}>
+        <Link
+          className="logo-link"
+          to="//morganstanley.github.io"
+        >
           <StaticImage
             width={267}
             src="../images/logo-black.png"
@@ -28,6 +46,7 @@ const Header = ({ location, links }) => {
           />
         </Link>
       </h1>
+
       <div className="header-nav">
         <ul>{Object.keys(links).map(menuLink)}</ul>
       </div>
