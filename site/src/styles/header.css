@@ -26,15 +26,11 @@
   list-style-type: none;
   margin: 0 1rem;
   padding: 0 0 10px 0;
-  border-bottom: 5px solid var(--white-foundational-color);
-}
-
-.header-nav ul li.nav-link-current,
-.header-nav ul li:hover {
-  border-bottom: 5px solid var(--primary-foundational-color);
 }
 
 .header-nav ul li a {
+  position: relative;
+  display: inline-block;
   font-weight: 600;
   font-size: 20px;
   color: var(--black-foundational-color);
@@ -42,6 +38,29 @@
 
 .header-nav ul li a:hover {
   text-decoration: none;
+}
+
+/* Thin blue nav indicator. Hover and the persistent active state both
+   target the same scaleX(1) value, so clicking an item you're already
+   hovering causes no transition at all (the value doesn't change) —
+   only an item that loses both hover and active retracts (scaleX(1)->0,
+   transform-origin: left, i.e. right-to-left). */
+.header-nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 4px;
+  background-color: var(--primary-foundational-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms ease-out;
+}
+
+.header-nav ul li a:hover::after,
+.header-nav ul li.nav-link-current a::after {
+  transform: scaleX(1);
 }
 
 .header-nav ul li:last-of-type {

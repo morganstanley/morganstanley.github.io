@@ -1,19 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
 import PageHead from '../components/page-head';
 
-const PageTemplate = ({ title, data, location, children }) => {
+const PageTemplate = ({ title, children }) => {
   return (
-    <Layout data={data} location={location}>
-      <article className="page-main content">
-        <header>
-          <h2>{title}</h2>
-        </header>
-        {children}
-      </article>
-    </Layout>
+    <article className="page-main content">
+      <header>
+        <h2>{title}</h2>
+      </header>
+      {children}
+    </article>
   );
 };
 

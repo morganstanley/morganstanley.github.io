@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/layout';
 import PageHead from '../components/page-head';
 
 const ContributeTemplate = ({ children, data, pageContext, location }) => {
@@ -11,7 +10,7 @@ const ContributeTemplate = ({ children, data, pageContext, location }) => {
   const siteTitle = data.site?.siteMetadata?.title;
 
   return (
-    <Layout data={data} location={location}>
+    <>
       <article className="page-main content">
         <h3>{siteTitle}</h3>
       </article>
@@ -49,7 +48,7 @@ const ContributeTemplate = ({ children, data, pageContext, location }) => {
           {children}
         </div>
       </article>
-    </Layout>
+    </>
   );
 };
 
